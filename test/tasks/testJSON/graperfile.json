@@ -1,0 +1,28 @@
+{
+    "root": "http://www.xsbhaima.com",
+    "entry": "http://www.xsbhaima.com/miyudaquan/",
+
+    "dbType": "file",
+    "dbName": "graper_data",
+    "tbName": "default",
+
+    "hasList": true,
+    "hasDetailOnList": false,
+
+    "isDetailPage": "div.article",
+    "isListPage": "div.link_nei",
+    "listContainer": "div.link_nei",
+    "listItem": "li",
+
+    "urlField": "url",
+    "detailItem": {
+        "title": "div.article h1",
+        "description": "div.article .article_txt"
+    },
+
+    "links": {
+        "detailLink": "a",
+        "nextList": "div.inc_page ul li a:eq(-2)",
+        "nextDetail": "#next-list-link-selector"
+    }
+}

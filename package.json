@@ -1,0 +1,44 @@
+{
+  "name": "avril.graper",
+  "version": "0.0.11",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "graper": "bin/graper"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "",
+  "license": "MIS",
+  "dependencies": {
+    "avril.queue": "^0.0.6",
+    "commander": "^2.6.0",
+    "extend": "^2.0.0",
+    "fs-extra": "^0.14.0",
+    "jsdom": "^3.1.0",
+    "request": "^2.51.0"
+  },
+  "_id": "avril.graper@0.0.11",
+  "dist": {
+    "shasum": "621827f0833abcd850c37da675f56fad496f06f6",
+    "tarball": "http://registry.npmjs.org/avril.graper/-/avril.graper-0.0.11.tgz"
+  },
+  "_from": "avril.graper@*",
+  "_npmVersion": "1.4.3",
+  "_npmUser": {
+    "name": "flowforever",
+    "email": "wangzhenchuan@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "flowforever",
+      "email": "wangzhenchuan@gmail.com"
+    }
+  ],
+  "_shasum": "621827f0833abcd850c37da675f56fad496f06f6",
+  "_resolved": "https://registry.npmjs.org/avril.graper/-/avril.graper-0.0.11.tgz"
+}

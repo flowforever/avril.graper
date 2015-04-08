@@ -1,0 +1,31 @@
+{
+  "root": "http://home.meishichina.com",
+  "entry": "http://home.meishichina.com/recipe-list.html",
+  "dbType": "file",
+  "dbName": "graper_data_",
+  "tbName": "default",
+  "hasList": true,
+  "hasDetailOnList": false,
+  "isDetailPage": "h1.recipe_De_title",
+  "isListPage": "#J_list ul",
+  "listContainer": "#J_list ul",
+  "listItem": "li",
+  "urlField": "url",
+  "detailItem": {
+    "title": "h1.recipe_De_title",
+    "description": "#block_txt1",
+    "steps": [".recipeStep li .recipeStep_word"],
+    "stepImgs": ["/src/.recipeStep li .recipeStep_img img"],
+    "tags": [".recipeTag a"],
+    "mainStaff": [ ".recipeCategory .recipeCategory_sub_R:eq(0) ul li" ],
+    "flavour": [ ".recipeCategory .recipeCategory_sub_R:eq(1) ul li" ],
+    "cookTool" : [".recipeCategory .recipeCategory_sub_R:eq(2) ul li"],
+    "detail": ".recipeStep",
+    "tip": ".recipeTip"
+  },
+  "links": {
+    "detailLink": "a",
+    "nextList": ".ui-page .ui-page-inner a",
+    "nextDetail": "#next-list-link-selector"
+  }
+}
