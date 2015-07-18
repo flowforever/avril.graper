@@ -1,8 +1,8 @@
 {
   "name": "avril.graper",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "",
-  "main": "main.js",
+  "main": "lib/graper.js",
   "directories": {
     "test": "test"
   },
