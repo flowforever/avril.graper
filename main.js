@@ -44,7 +44,7 @@ var runConfig = function(){
 
 	graper.run(config);
 	
-}
+};
 
 q.$if(q.$await(fs.exists, script), function() {
 	runConfig();
