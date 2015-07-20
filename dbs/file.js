@@ -4,10 +4,10 @@ var path = require('path');
 
 
 var executeTime = 0;
-module.exports = function(graper,dataItem) {
+module.exports = function (graper, dataItem) {
     var cfg = graper.options;
-    var dbName = cfg.dbName  || 'grapdata' ;
-    var tableName = cfg.tbName || 'site';
+    var dbName = cfg.dbName || 'graper_data';
+    var tableName = cfg.tbName || 'default';
 
     var url = dataItem.url;
 
@@ -15,11 +15,11 @@ module.exports = function(graper,dataItem) {
 
     var fileName = urlArr[urlArr.length - 1];
 
-    var jsonFilePath =  path.resolve( process.cwd(), dbName, tableName, fileName +'.json');
+    var jsonFilePath = path.resolve(process.cwd(), dbName, tableName, fileName + '.json');
 
     var folderPath = path.dirname(jsonFilePath);
 
-    if(executeTime++ == 0){
+    if (executeTime++ == 0) {
         fs.ensureDirSync(folderPath);
     }
 
@@ -27,10 +27,18 @@ module.exports = function(graper,dataItem) {
 
     var $filseExisted = q.$await(fs.exists, jsonFilePath);
 
-    q.$if($filseExisted, function(){
+    q.$if($filseExisted, function () {
 
-    }).$else(function(){
-        fs.writeJsonFile( jsonFilePath, dataItem );
+    }).$else(function () {
+        fs.writeJsonFile(jsonFilePath, dataItem);
     });
 
+};
+module.exports.init = function (graper) {
+    var cfg = graper.options;
+    var dbName = cfg.dbName || 'graper_data';
+    var tableName = cfg.tbName || 'default';
+
+    fs.ensureDir(path.resolve(process.cwd(), dbName, tableName), function () {
+    });
 };
