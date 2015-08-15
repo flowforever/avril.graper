@@ -21,7 +21,8 @@
     "fs-extra": "^0.14.0",
     "jsdom": "^3.1.0",
     "phantom": "^0.7.2",
-    "request": "^2.51.0"
+    "request": "^2.51.0",
+    "tough-cookie": "^2.0.0"
   },
   "_id": "avril.graper@0.0.11",
   "dist": {
